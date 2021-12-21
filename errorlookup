@@ -1,0 +1,13 @@
+#googler -x -n 5 "`tail -n 1 /Users/xoxrumblelorexox/Desktop/Workbash/err.txt`"< echo 1 > output
+#open -u `cat output|grep https|head -n2|tail -n1`
+
+#if [[ ${#stderr} == 0 ]]; then
+#	echo "Empty!"
+x="`tail -n1 ~/Desktop/Workbash/err.txt`"
+if [[ $x == '' ]]; then
+	echo ''
+else
+	exec 2> /dev/null | googler -x -n 5 "`tail -n 1 /Users/xoxrumblelorexox/Desktop/Workbash/err.txt`" < echo 1 > output
+	open -u `cat output|grep https|head -n2|tail -n1`
+fi
+
