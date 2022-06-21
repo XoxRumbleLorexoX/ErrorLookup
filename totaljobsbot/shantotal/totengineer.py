@@ -28,7 +28,7 @@ url='https://www.totaljobs.com/account/signin?ReturnUrl=/'
 driver.get(url)
 
 loginemail='shan.lingeswaran@hotmail.co.uk'
-passw='minimumwaste1'
+passw=''
 time.sleep(2)
 try:
     driver.find_element_by_id('ccmgt_explicit_accept').click()
